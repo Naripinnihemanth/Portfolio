@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Profile from "../../assets/Profile.jpg";
+import { motion } from "framer-motion";
 import "./Nav.css";
+import { AiOutlineImport } from "react-icons/ai";
 function Nav() {
   const [navTogg, setNavTogg] = useState(false);
   function togg() {
@@ -15,7 +17,12 @@ function Nav() {
   }, []);
 
   return (
-    <div className="navbar">
+    <motion.div
+      initial={{}}
+      whileInView={{}}
+      transition={{ duration: 1 }}
+      className="navbar"
+    >
       <div className="name">
         <img src={Profile} alt="" className="profile" />
         <h1>Hemanth Naripinni</h1>
@@ -41,7 +48,7 @@ function Nav() {
         <p>Get my CV</p>
       </div>
       <RxHamburgerMenu className="menu" onClick={togg} />
-    </div>
+    </motion.div>
   );
 }
 
