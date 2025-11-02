@@ -14,11 +14,7 @@ function Projects() {
           transition={{ duration: 1 }}
           className="card"
         >
-          <img
-            src="/portfolioHome.jpg"
-            alt="tumbanail"
-            className="project-img"
-          />
+          <img src="/portfolioHome.jpg" alt="img" className="project-img" />
           <h2 className="project-title">PortFolio</h2>
           <p className="project-description">
             The website highlights my technical expertise in front-end
@@ -33,13 +29,20 @@ function Projects() {
           </ul>
           <div className="btn-container">
             <a
-              href="https://github.com/Naripinnihemanth/Portfolio.git"
+              href="https://github.com/Naripinnihemanth/Hemanth-Naripinni.git"
               target="blank"
               className="git-logo"
             >
               <VscGithubInverted />
             </a>
-            <div className="btn">Live Site</div>
+            <div className="btn">
+              <a
+                href="https://naripinnihemanth.github.io/Hemanth-Naripinni/"
+                target="blanko"
+              >
+                Live Site
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
