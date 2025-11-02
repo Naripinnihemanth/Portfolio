@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./About.css";
 import { motion, transform, useScroll } from "framer-motion";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 function About() {
   const skills = [
     {
@@ -117,6 +119,37 @@ function About() {
         >
           <a href="" className="contect-text">
             CONNECT WITH ME
+          </a>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.5, transform: "translateY(30px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+          transition={{ duration: 1 }}
+          className="social-media"
+        >
+          <a
+            href="https://www.linkedin.com/in/hemanth-naripinni-96393a281"
+            className="icon"
+            target="blank"
+          >
+            <FaLinkedin />
+          </a>
+          <a href="mailto:hemanth4119@gmail.com" className="icon">
+            <IoMdMail />
+          </a>
+          <a
+            href="https://github.com/Naripinnihemanth"
+            className="icon"
+            target="blank"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.instagram.com/hemanth_naripinni"
+            className="icon"
+            target="blank"
+          >
+            <FaInstagram />
           </a>
         </motion.div>
       </div>

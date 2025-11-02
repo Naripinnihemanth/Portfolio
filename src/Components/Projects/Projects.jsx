@@ -2,10 +2,11 @@ import React from "react";
 import "./projects.css";
 import { VscGithubInverted } from "react-icons/vsc";
 import { motion } from "framer-motion";
+// import MiniProjects from "../MiniProjects/MiniProjects";
 function Projects() {
   return (
     <div className="project-container" id="projects">
-      <h1 className="title">Projects</h1>
+      <h1 className="title">Real Time Projects</h1>
       <div className="card-container">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(50px)" }}
@@ -27,11 +28,18 @@ function Projects() {
             <li>React.js</li>
           </ul>
           <div className="btn-container">
-            <VscGithubInverted className="git-logo" />
+            <a
+              href="https://github.com/Naripinnihemanth/Portfolio.git"
+              target="blank"
+              className="git-logo"
+            >
+              <VscGithubInverted />
+            </a>
             <div className="btn">Live Site</div>
           </div>
         </motion.div>
       </div>
+      {/* <MiniProjects /> */}
     </div>
   );
 }

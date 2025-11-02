@@ -1,6 +1,6 @@
 .about-container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 .img-item {
   width: clamp(90px, 20vw, 200px);
@@ -21,6 +21,8 @@
   background-position: center; */
 }
 .title {
+  width: 100%;
+  text-align: center;
   font-family: var(--para);
   font-size: 1.5rem;
   background: linear-gradient(
@@ -88,12 +90,13 @@
 }
 .skill-description {
   position: absolute;
+  inset: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 40%;
-  height: 40%;
+  min-height: 40%;
   border: 1px solid;
   background-color: rgba(105, 103, 103, 0.2);
   backdrop-filter: blur(8px);
@@ -115,6 +118,20 @@
   border: 1px solid;
   padding: 5px 15px;
   border-radius: 10px;
+}
+.social-media {
+  min-width: clamp(100px, 20%, 200px);
+  min-height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: clamp(1.1rem, 5vw, 1.5rem);
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 700px) {
   .about {

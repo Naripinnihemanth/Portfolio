@@ -1,18 +1,18 @@
 .project-container {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0% 10%;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 .card-container {
   color: white;
   /* border: 1px solid; */
   width: 100vw;
-  min-height: 100vh;
+  height: auto;
   display: flex;
   justify-content: start;
   align-items: start;
@@ -87,5 +87,12 @@
 @media screen and (max-width: 700px) {
   .card {
     scale: 1;
+  }
+  .project-container {
+    padding: 10%;
+  }
+  .card-container {
+    align-items: center;
+    justify-content: center;
   }
 }

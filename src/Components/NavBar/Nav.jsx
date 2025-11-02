@@ -17,12 +17,7 @@ function Nav() {
   }, []);
 
   return (
-    <motion.div
-      initial={{}}
-      whileInView={{}}
-      transition={{ duration: 1 }}
-      className="navbar"
-    >
+    <div className="navbar">
       <div className="name">
         <img src={Profile} alt="" className="profile" />
         <h1>Hemanth Naripinni</h1>
@@ -37,18 +32,18 @@ function Nav() {
         <a href="#projects" className="item">
           Projects
         </a>
-        <a href="#home" className="item">
-          Home
+        <a href="#mini-projects" className="item">
+          Mini Projects
         </a>
-        <a href="#home" className="item">
-          Home
+        <a href="#contect" className="item">
+          Contect
         </a>
       </div>
       <div className="cv" download>
         <p>Get my CV</p>
       </div>
       <RxHamburgerMenu className="menu" onClick={togg} />
-    </motion.div>
+    </div>
   );
 }
 
