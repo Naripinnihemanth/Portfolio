@@ -4,17 +4,11 @@ import { motion } from "framer-motion";
 import { VscGithubInverted } from "react-icons/vsc";
 
 function MiniProjects() {
-  const [visibility1, setVisibility1] = useState(false);
-  const [itemid, setItemid] = useState(0);
   const [toggle, setToggle] = useState(false);
   const [desc, setDesc] = useState({
     description: "",
     img: "",
   });
-  function HandleVisibility(i) {
-    setItemid(i);
-    setVisibility1(true);
-  }
   const projects = [
     {
       id: 1,
@@ -100,23 +94,12 @@ function MiniProjects() {
             transition={{ duration: 1 }}
             key={item.id}
             className="project-item"
-            onMouseEnter={() => {
-              HandleVisibility(item.id);
-            }}
-            onMouseLeave={() => {
-              setVisibility1(false);
-            }}
           >
             <p className="item-name">{item.name}</p>
             <a
               href={item.gitLink}
               className="git-logo project-git-logo"
               target="blank"
-              style={{
-                visibility: `${
-                  visibility1 && item.id === itemid ? "visible" : "hidden"
-                }`,
-              }}
             >
               <VscGithubInverted />
             </a>

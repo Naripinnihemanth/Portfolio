@@ -39,9 +39,9 @@ function Nav() {
           Contect
         </a>
       </div>
-      <div className="cv" download>
+      <a className="cv" href="./Hemanth_naripinni.pdf" download>
         <p>Get my CV</p>
-      </div>
+      </a>
       <RxHamburgerMenu className="menu" onClick={togg} />
     </div>
   );

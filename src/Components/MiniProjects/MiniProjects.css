@@ -24,7 +24,7 @@
 .project-item {
   width: clamp(300px, 75%, 600px);
   min-height: 50px;
-  border: 1px solid;
+  border: 0.5px solid white;
   display: grid;
   grid-template-columns: 1fr 50px 100px;
   justify-content: space-between;
@@ -42,10 +42,19 @@
 }
 .project-git-logo {
   width: 100%;
+  visibility: hidden;
   /* border: 1px solid; */
 }
 .mini-project-img {
   width: 100%;
   object-fit: cover;
   border-radius: inherit;
+}
+.project-item:hover .project-git-logo {
+  visibility: visible;
+}
+@media screen and (max-width: 900px) {
+  .project-git-logo {
+    visibility: visible;
+  }
 }
